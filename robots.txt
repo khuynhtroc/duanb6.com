@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-User-Agent: *
+User-Agent: /
 Disallow: /wp-admin
 Disallow: /wp-content/
 
