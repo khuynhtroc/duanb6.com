@@ -1,0 +1,38 @@
+<div class="sidebar-widgets-wrap">
+
+
+	<div class="widget clearfix">
+		{% include ad_sidebar_top.html %}
+	</div>
+
+
+	<div class="widget clearfix">
+
+		<h4>BÀI VIẾT LIÊN QUAN</h4>
+		<div id="post-list-footer">
+
+			{% for post in site.categories.tin-tuc limit:5 %}
+			<div class="spost clearfix">
+				<div class="entry-c">
+					<div class="entry-title">
+						<h5><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h5>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+
+
+		</div>
+
+	</div>
+
+	
+	
+
+	<div class="widget clearfix">
+
+		{% include ad_sidebar_bottom.html %}
+
+	</div>
+
+</div>

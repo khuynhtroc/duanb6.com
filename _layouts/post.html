@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	{% include head.html %}
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		{% include header.html %}
+
+
+
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+
+		<section id="page-title">
+
+			<div class="container clearfix">
+				<h1>{{ page.title }}</h1>
+				<span>{{ page.description }}</span>
+				<ol class="breadcrumb">
+					<li><a href="{{ site.url }}">Trang Chủ</a></li>
+					<li><a href="{{ site.url }}/tin-tuc/">Tin Tức</a></li>
+					<li class="active">{{ page.title }}</li>
+				</ol>
+			</div>
+
+		</section>
+		
+			<div class="content-wrap">
+			<div class="container clearfix">
+				<div class="postcontent nobottommargin clearfix">
+					{{ content }}
+
+					<div class="line"></div>
+					
+					<!-- Tag Cloud
+								============================================= -->
+								<div class="tagcloud clearfix bottommargin">
+									<a href="{{ page.tags }}">{{ page.tags }}</a>
+								</div><!-- .tagcloud end -->
+
+								<div class="clear"></div>
+
+								<!-- Post Single - Share
+								============================================= -->
+								<div class="si-share noborder clearfix">
+									<span>Chia sẻ bài viết này:</span>
+									<div>
+										<a href="#" class="social-icon si-borderless si-facebook">
+											<i class="icon-facebook"></i>
+											<i class="icon-facebook"></i>
+										</a>
+										<a href="#" class="social-icon si-borderless si-twitter">
+											<i class="icon-twitter"></i>
+											<i class="icon-twitter"></i>
+										</a>
+										<a href="#" class="social-icon si-borderless si-gplus">
+											<i class="icon-gplus"></i>
+											<i class="icon-gplus"></i>
+										</a>
+										<a href="#" class="social-icon si-borderless si-email3">
+											<i class="icon-email3"></i>
+											<i class="icon-email3"></i>
+										</a>
+									</div>
+								</div><!-- Post Single - Share End -->
+					
+					<div class="line"></div>
+
+
+					<h4>BÀI VIẾT LIÊN QUAN</h4>
+					<div class="row clearfix">
+						<ul class="iconlist">
+							{% for post in site.categories.tin-tuc limit:5 %}
+								<li><i class="icon-leaf"></i> <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+							{% endfor %}
+						</ul>
+					</div>
+					<!-- END related posts -->
+
+
+				</div>
+					
+				<div class="sidebar nobottommargin col_last clearfix">
+					{% include sidebar.html %}
+				</div>
+
+				</div>
+			</div>
+			
+
+		</section><!-- #content end -->
+
+		{% include footer.html %}
+
+	</div><!-- #wrapper end -->
+
+
+{% include script.html %}
+
+
+</body>
+</html>

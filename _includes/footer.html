@@ -1,0 +1,112 @@
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap clearfix">
+
+					<div class="col_two_third">
+
+						<div class="col_one_third">
+
+							<div class="widget clearfix">
+
+								<a href="/"><img  src="{{ site.url }}/images/logo_white.png" alt="Dự án La Casta Văn Phú" class="footer-logo; responsive-img lazy"></a> 
+								
+								<div style="background: url('{{ site.url }}/images/world-map.png') no-repeat center center; background-size: 100%;">
+									
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="col_one_third">
+
+							<div class="widget widget_links clearfix">
+
+								<h4>DỰ ÁN LACASTA</h4>
+
+								<ul>
+									
+									<li><a href="{{ site.url }}/chinh-sach.html" rel="nofollow">Chính sách</a></li>
+									<li><a href="{{ site.url }}/phap-ly.html" rel="nofollow">Pháp Lý</a></li>
+									<li><a href="{{ site.url }}/lien-he.html">Liên Hệ</a></li>
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="col_one_third col_last">
+
+							<div class="widget widget_links clearfix">
+								<h4>THÔNG TIN LACASTA VĂN PHÚ</h4>
+								<ul>
+									<li><a href="#">Tổng Quan Dự Án</a></li>
+									<li><a href="#">Tiện Ích</a></li>
+									<li><a href="#">Bảng Giá</a></li>
+									<li><a href="#">Thiết Kế</a></li>
+									<li><a href="#">Chính Sách Bán Hàng</a></li>
+								</ul>
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col_one_third col_last">
+						<div class="widget clearfix">
+								<h4>Tin Tức Mới Nhất</h4>
+
+								<div id="post-list-footer">
+
+									{% for post in site.categories.tin-tuc limit:5 %}
+									<div class="spost clearfix">
+										<div class="entry-c">
+											<div class="entry-title">
+												<h5><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h5>
+											</div>
+										</div>
+									</div>
+									{% endfor %}
+
+								</div>
+							</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container clearfix">
+
+					<div class="col_half">
+						Copyrights &copy; {{ site.time | date:"%Y" }} All Rights Reserved.<br>
+						<div class="copyright-links"><a href="{{ site.url }}/chinh-sach.html" rel="nofollow">Chính Sách</a> / <a href="{{ site.url }}/phap-ly.html" rel="nofollow">Pháp Lý</a></div>
+					</div>
+
+					<div class="col_half col_last tright">
+						<div class="fright clearfix copyright-links">
+							Dự án <a href="{{ site.url }}"><span>Liền Kề La Casta Văn Phú</span></a> Lê Trọng Tấn, Văn Phú, Hà Đông, Hà Nội.
+						</div>
+
+						<div class="clear"></div>
+
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+
+	
