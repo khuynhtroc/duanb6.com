@@ -4,7 +4,7 @@ email: vicemanit@gmail.com
 description: "Dự án Lacasta Văn Phú"
 url: "https://duanb6.com" 
 baseurl: "https://duanb6.com"
-allow_search_engine: true
+allow_search_engine: false
 google_verify: "R-ooKMXiN2pPI0tSGAsZUDZe2hurQ_JAOyJEWcPLm4c"
 bing_verify: ""
 google_analytics: "UA-108819307-1"
